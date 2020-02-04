@@ -1,0 +1,96 @@
+<DOCTYPE! html>
+
+  <html>
+
+  <head>
+    <title>Katelyn kim</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Quicksand|Titillium+Web&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      a:link {
+        text-decoration: none !important;
+        cursor: pointer;
+      }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <div id="top"></div>
+    <div class="bg"></div>
+    <div id="logo" data-aos="zoom-in" data-aos-delay="1800"></div>
+    <div class="navigation">
+      <ul class="navi">
+        <li data-aos="fade-right" data-aos-delay="1800"><a href="#top">ABOUT ME</a></li>
+        <li data-aos="fade-right" data-aos-delay="2000"><a href="#project-section">PROJECTS</a></li>
+        <li data-aos="fade-right" data-aos-delay="2200"><a href="#contact-section">CONTACT</a> </li>
+      </ul>
+    </div>
+    <div class="content">
+      <section class="aboutme">
+        <p id="hi" data-aos="zoom-in" data-aos-duration="500"> Hi, I'm Katelyn! </p>
+        <p id="hi" id="hi2" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">I am a Computing Science Major at Simon Fraser University.</p>
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/jin-young-kim1994/" target="_blank" id="youtube" class="icon">
+            <img src="images/youtube3.png" alt="linkedin" id="youtube" data-aos="flip-left" data-aos-delay="1000">
+          </a>
+
+          <a href="https://www.linkedin.com/in/jin-young-kim1994/" target="_blank" id="linkedin" class="icon">
+            <img src="images/linkedin2.png" alt="linkedin" id="linkedin" data-aos="flip-left" data-aos-delay="1200">
+          </a>
+          <a href="https://github.com/KatelynKim" target="_blank" id="github" class="icon">
+            <img src="images/github2.png" alt="github" id="github" data-aos="flip-left" data-aos-delay="1400">
+          </a>
+        </div>
+      </section>
+
+      <section class="hobbies">
+        <p id="hobbies"> I like to... </p>
+        <div class="icons2">
+          <div id="piano" class="hobby" data-aos="flip-left" data-aos-delay="1000"  onclick="toggleVis1()"></div>
+          <div id="paint" class="hobby" data-aos="flip-left"  data-aos-delay="1200" onclick="toggleVis2()"></div>
+          <div id="spanish" class="hobby" data-aos="flip-left" data-aos-delay="1400" onclick="toggleVis3()"></div>
+          <div id="psychology" class="hobby" data-aos="flip-left" data-aos-delay="1600" onclick="toggleVis4()"></div>
+          <div id="game" class="hobby" data-aos="flip-left" data-aos-delay="1800" onclick="toggleVis5()"></div>
+        </div>
+
+        <div id="piano-desc" class="desc">I've been playing piano since 7.<div>
+        <div id="paint-desc" class="desc"><div>
+        <div id="spanish-desc" class="desc"><div>
+        <div id="psychology-desc" class="desc"><div>
+        <div id="game-desc" class="desc"><div>
+
+      </section>
+
+      <section id="project-section">
+        <p id="project-header">MY PROJECTS</p>
+        <div id="project1" data-aos="zoom-in"></div>
+        <div id="project2">airbnb</div>
+        <div id="project3">sudoku solver</div>
+      </section>
+
+      <section id="contact-section">
+        <p id="contact-header">CONTACT ME</p>
+        <p id="location">BC Canada </p>
+        <p id="email">katelynk@sfu.ca</p>
+
+
+
+
+
+      </section>
+
+
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+  <script src="java/main.js"></script>
+
+  </html>

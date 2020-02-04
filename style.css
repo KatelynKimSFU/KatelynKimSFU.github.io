@@ -1,0 +1,285 @@
+
+body, html {
+  height: 100%;
+  margin: 0;
+
+  background-image:url("images/bg4.jpg");
+  background-attachment:fixed;
+  scroll-behavior: smooth;
+}
+
+#top{
+  position:absolute;
+  top:0;
+}
+
+
+.content{
+  position:relative;
+  left:0;
+  text-align:center;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  width:100%;
+  height:100%;
+}
+
+#hi{
+
+  color:white;
+  font-size:25px;
+}
+
+.aboutme{
+  top:50%;
+  position:relative;
+}
+
+#description{
+  position: relative;
+  font-size:18px;
+  opacity:0.8;
+  top:100%;
+  left:28%;
+  width:35em;
+  line-height: 20px;
+}
+
+.hobbies{
+  position: relative;
+  font-size:30px;
+  opacity: 0.8;
+  top:100%;
+}
+
+
+.navigation{
+  position: fixed;
+  height:3em;
+  top:8%;
+  width: 20%;
+  color:white;
+  z-index: 1;
+  opacity:0.8;
+  font-family: 'Quicksand', sans-serif;
+}
+
+ul{
+}
+ul li{
+  list-style: none;
+  letter-spacing: 2px;
+  font-size:18px;
+  padding-top:1.5em;
+  line-height:18px;
+  height:18px;
+}
+
+ul li a{
+  display:block;
+  color:white;
+  opacity:0.8;
+  font-size:18px;
+  position:fixed;
+  margin-top:2em;
+}
+
+ul li a:hover{
+  opacity:1;
+}
+
+/*
+ul li a::after{
+  display:block;
+  content:'';
+  width:0%;
+  background-color: rgba(225,225,225,0.6);
+  height:1px;
+  transition: 0.2s ease all .3s;
+}
+*/
+
+
+#youtube{
+  width:40px;
+  height:40px;
+  padding-right:8px;
+  top:110%;
+
+}
+
+ #linkedin{
+   width:35px;
+   height:35px;
+   padding-right:8px;
+   top:110%;
+   padding-bottom:8px;
+ }
+
+ #github{
+   width:40px;
+   height:40px;
+   padding-right:8px;
+   top:110%;
+   padding-bottom:3px;
+ }
+
+.icons {
+  position:relative;
+  top:52%;
+}
+
+.icon{
+  position:relative;
+  width:30px;
+  height:30px;
+  top:110%;
+}
+
+.icons2{
+  position:relative;
+  top:120%;
+  width:20em;
+  margin: 0 auto;
+}
+
+
+.desc{
+  font-size: 18px;
+  padding: 1em 1em;
+  display:block;
+  background-color: rgba(75,75,75,0.5);
+}
+#piano{
+  display:inline-block;
+  background-image: url("images/piano.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:80px;
+  height:50px;
+  padding-right:10px;
+}
+
+
+#piano-desc{
+  width: 30em;
+  height:5em;
+  opacity:0;
+  position:relative;
+  margin: 1em auto;
+}
+
+
+#paint{
+  display:inline-block;
+  background-image: url("images/paint.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:80px;
+  height:50px;
+  padding-right:10px;
+}
+
+
+#spanish{
+  display:inline-block;
+  background-image: url("images/spanish.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:80px;
+  height:50px;
+  padding-right:10px;
+}
+
+
+#psychology{
+  display:inline-block;
+  background-image: url("images/psychology.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:80px;
+  height:50px;
+  padding-right:10px;
+}
+
+
+#game{
+  display:inline-block;
+  background-image: url("images/gamepad.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:80px;
+  height:50px;
+  padding-right:10px;
+}
+
+
+#logo {
+  position: fixed;
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 52px;
+  height: 35px;
+  margin-top:3em;
+  margin-left:3em;
+  z-index: 1000;
+}
+
+#project-section{
+  position:relative;
+  top:150%;
+}
+#project-header{
+  position: relative;
+  font-size: 35px;
+}
+
+
+#project1{
+  position:relative;
+  background-image:url("images/project1.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  width:25em;
+  height:15em;
+  filter: brightness(0.8);
+  margin: 0 auto;
+  z-index:10000;
+  border-radius:10px;
+}
+
+
+
+
+#contact-section{
+  position:relative;
+  top:300%;
+}
+#contact-header{
+  position: relative;
+  font-size: 35px;
+}
+
+#location::before{
+  content:'';
+  background-image: url("images/gps.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  padding-right:20px;
+}
+
+#email::before{
+  content:'';
+  background-image: url("images/envelope.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  padding-right:20px;
+  margin-left:35px;
+}
