@@ -1,48 +1,93 @@
-// import AOS from 'aos';//
-// import 'aos/dist/aos.css';//
-//
-// ..function goto($hashtag){
-//      document.location = "index.html#" + $hashtag;
-// }
-//
-//
-// $(document).ready(function () {
-//         var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-//         if (window.location.hash && isChrome) {
-//             setTimeout(function () {
-//                 var hash = window.location.hash;
-//                 window.location.hash = "";
-//                 window.location.hash = hash;
-//             }, 300);
-//         }
-//     });
+
+let project1_images=["images/project2g.png", "images/project2e.png", "images/project2f.png", ]
+
+let project1_index = 0
+
+function plusProject1_index(n){
+  showNextImg(project1_index += n);
+}
+
+function showNextImg(n){
+  if (projectIndex%2==0){
+    var project1 = document.getElementsByClassName("proj_zombie")[0]
+
+    if (n%3==0){
+      project1.src = project1_images[0]
+    }
+    else if (n%2==1) {
+      project1.src = project1_images[1]
+    }
+    else{
+      project1.src = project1_images[2]
+    }
+  }
+
+  // else if (projectIndex%2==1) {
+  //   document.getElementById("project_title").innerHTML="Bubble Pop";
+  // }
+}
 
 
+function plusProject(n){
+  showProject(projectIndex += n);
+  console.log(projectIndex);
+}
 
-// You can also pass an optional settings object
-// below listed default settings
-// AOS.init({
-//   // Global settings:
-//   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-//   startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-//   initClassName: 'aos-init', // class applied after initialization
-//   animatedClassName: 'aos-animate', // class applied on animation
-//   useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-//   disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-//   debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-//   throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-//
-//
-//   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-//   offset: 120, // offset (in px) from the original trigger point
-//   delay: 0, // values from 0 to 3000, with step 50ms
-//   duration: 400, // values from 0 to 3000, with step 50ms
-//   easing: 'ease', // default easing for AOS animations
-//   once: false, // whether animation should happen only once - while scrolling down
-//   mirror: false, // whether elements should animate out while scrolling past them
-//   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-//
-// });
+function showPopUp(){
+  document.getElementById("pop-up").style.opacity = 1;
+  document.getElementById("project1").style.opacity = 0;
+  document.getElementById("pop-up").style.zIndex = "10000";
+}
+
+function closePopUp(){
+  document.getElementById("pop-up").style.opacity = 0;
+  document.getElementById("project1").style.opacity = 1;
+  document.getElementById("pop-up").style.zIndex = "0";
+}
+
+var projectIndex = 0;
+
+function showProject(n){
+  console.log("HAHAHAHA");
+  if (n%2==0){
+    document.getElementById("project_title").innerHTML="Zombie Exterminator";
+  }
+  else if (n%2==1) {
+    document.getElementById("project_title").innerHTML="Bubble Pop";
+  }
+
+  else{
+      document.getElementById("project_title").innerHTML="Bubble Pop";
+  }
+}
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+  showProject(projectIndex += n);
+
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("project")
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
 
 let status1=false;
 let status2=false;
@@ -66,32 +111,3 @@ let toggleVis1 = function(){
   console.log("hihi");
 
 }
-
-
-
-
-
-
-
-// //let toggleStatus = false;
-//
-// let toggleNav = function() {
-//   let getli1 = document.querySelector("#AboutMe");
-//   let getli2 = document.querySelector("#Resume");
-//   let getli3 = document.querySelector("#Contact");
-//
-//   if (toggleStatus === false) {
-//     getli1.style.opacity = 0;
-//     getli2.style.opacity = 0;
-//     getli3.style.opacity = 0;
-//     toggleStatus = true;
-//   }
-//
-//
-//   else if (toggleStatus === true){
-//     getli1.style.opacity = 1;
-//     getli2.style.opacity = 1;
-//     getli3.style.opacity = 1;
-//     toggleStatus = false;
-//   }
-// }
