@@ -87,17 +87,6 @@ ul li a:hover{
   opacity:1;
 }
 
-/*
-ul li a::after{
-  display:block;
-  content:'';
-  width:0%;
-  background-color: rgba(225,225,225,0.6);
-  height:1px;
-  transition: 0.2s ease all .3s;
-}
-*/
-
 
 #youtube{
   width:40px;
@@ -297,15 +286,17 @@ ul li a::after{
 #project-header{
   position: relative;
   font-size: 35px;
-  opacity: 1;
+  opacity: 0;
 }
 
-#project_title{
+#project-title{
   margin-top:5em;
   font-size: 26px;
+  opacity: 0;
 }
 
 #project1{
+  display:none;
   cursor: pointer;
   position:relative;
   background-image:url("images/project2a.png");
@@ -317,19 +308,22 @@ ul li a::after{
   z-index:10000;
   border-radius:10px;
   transition: 0.2s ease all .3s;
+
 }
 
 #project2{
+  display:none;
   cursor: pointer;
   position:relative;
-  background-image:url("images/project1.png");
+  background-image:url("images/project3a.png");
   background-size:contain;
-  width:25em;
-  height:15em;
-  filter: brightness(0.8);
+  background-repeat: no-repeat;
+  width:40em;
+  height:20em;
   margin: 0 auto;
   z-index:10000;
   border-radius:10px;
+  transition: 0.2s ease all .3s;
 }
 
 
@@ -358,16 +352,18 @@ ul li a::after{
 }
 
 #project_description{
-  top:15%;
+  top:10%;
+  font-size:20px;
   position:relative;
   color:white;
   z-index: 5000;
 }
 
-.proj_zombie{
+#proj_zombie{
   top:10%;
   position:relative;
   transition: 0.2s ease all .3s;
+  border-radius:10px;
 }
 
 
@@ -384,6 +380,14 @@ ul li a::after{
   opacity:0;
 }
 
+#location, #email{
+  opacity:0;
+}
+
+#email{
+  margin-left: 1em;
+}
+
 #location::before{
   content:'';
   background-image: url("images/gps.png");
@@ -393,19 +397,37 @@ ul li a::after{
   height: 30px;
   display: inline-block;
   padding-right:20px;
+
 }
 
+a#email{
+  color:white;
+
+}
+
+#email_img{
+  background-image: url("images/envelope.png");
+  background-repeat:no-repeat;
+  background-size: contain;
+  width:25px;
+  height:25px;
+  display:inline-block;
+  margin-left:2.8em;
+  opacity: 0;
+}
+/*
 #email::before{
   content:'';
   background-image: url("images/envelope.png");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 30px;
-  height: 30px;
-  display: inline-block;
+  width: 25px;
+  height: 25px;
+  z-index:5000000;
+  display:inline-block;
   padding-right:20px;
   margin-left:35px;
-}
+} */
 
 .fade {
   -webkit-animation-name: fade;
