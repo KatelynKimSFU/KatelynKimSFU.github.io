@@ -21,11 +21,11 @@
   <body>
     <div id="top"></div>
     <div class="bg"></div>
-    <div id="logo"></div>
+    <div id="logo" data-aos="fade-right" data-aos-delay="2000"></div>
     <div class="navigation">
       <ul class="navi">
-        <li><a href="#top" data-aos="fade-right" data-aos-delay="2200">ABOUT ME</a></li>
-        <li><a href="#project-section" data-aos="fade-right" data-aos-delay="2500">PROJECTS</a></li>
+        <li><a href="#top" data-aos="fade-right" data-aos-delay="2300">ABOUT ME</a></li>
+        <li><a href="#project-section" data-aos="fade-right" data-aos-delay="2600">PROJECTS</a></li>
         <li><a href="#contact-section" data-aos="fade-right" data-aos-delay="2800">CONTACT</a> </li>
       </ul>
     </div>
@@ -56,7 +56,7 @@
 
             <p id="project-title" class="text fade" onclick="plusProject(1)">Zombie Exterminator</p>
 
-            <div class = "project fade" id="project1" data-aos="fade-up" data-aos-duration="4000" onclick="showPopUp(0)" ></div>
+            <div class = "project fade" id="project1" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" onclick="showPopUp(0)" ></div>
             <div class = "project fade"  id="project2" onclick="showPopUp(1)"></div>
 
             <a class="next" data-aos="fade-up" data-aos-duration="4000" onclick="plusSlides(1)">

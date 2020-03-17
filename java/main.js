@@ -8,25 +8,22 @@ let project2_index = 0
 
 function plusProject1_index(n){
   if (this.id="project1"){
-    console.log("hi");
   showNextImg(project1_index += n);
   }
 
   else if (this.id="project2") {
-    console.log("hi2");
     showNextImg(project2_index += n);
   }
 }
 
 // SHOWS IMAGES ON THE POP-UP SCREEN FOR EACH PROJECT.
 function showNextImg(n){
-  console.log("THE PROJECT INDEX IS: " + projectIndex)
   if (projectIndex%2==0){
     var project1 = document.getElementById("proj_zombie")
 
     if (n%3==0){
       project1.src = project1_images[0]
-      document.getElementById("project_description").innerHTML = "A puzzle game for Android devices.<br>Supports landscape orientation only."
+      document.getElementById("project_description").innerHTML = "A puzzle game for Android devices.<br>Currently supports landscape orientation only."
     }
     else if (n%2==1) {
       project1.src = project1_images[1]
@@ -45,7 +42,6 @@ function showNextImg(n){
     project2.style.height ="430px";
 
     if (n%3==0){
-      console.log(projectIndex)
       project2.src = project2_images[0]
       document.getElementById("project_description").innerHTML = "The Depth of Field Calculator calculates optimal distances for taking sharp pictures. Choose from existing lenses or lenses that you have previously added."
     }
@@ -64,22 +60,35 @@ function showNextImg(n){
 }
 
 function showPopUp(n){
+
+  // If it's the first project //
   if (n==0){
   document.getElementById("pop-up").style.opacity = 1;
   document.getElementById("project1").style.opacity = 0;
+  var firstImg = document.getElementById("proj_zombie");
+  var description = document.getElementById("project_description");
+
+  description.innerHTML = "A puzzle game for Android devices.<br>Currently supports landscape orientation only.";
+  firstImg.src = "images/project2g.png";
+  firstImg.style.width = "40em";
+  firstImg.style.height = "20em";
+  firstImg.style.position = "relative";
+  description.style.width = "1000px";
   }
 
+  //If it's the second project //
   else if (n==1){
     var firstImg = document.getElementById("proj_zombie");
     var description = document.getElementById("project_description");
     document.getElementById("pop-up").style.opacity = 1;
-    description.innerHTML = "A lens calculator";
+    description.innerHTML = "The Depth of Field Calculator calculates optimal distances for taking sharp pictures. Choose from existing lenses or lenses that you have previously added.";
     firstImg.src = "images/project3f.png";
     firstImg.style.width = "270px";
     firstImg.style.height = "430px";
     firstImg.style.position = "absolute";
-
-    description.style.width = "100px";
+    description.style.width = "300px";
+    description.style.marginLeft="6em";
+    description.style.marginTop="5em";
 
 
   }
@@ -93,13 +102,15 @@ function closePopUp(){
   document.getElementById("pop-up").style.opacity = 0;
   document.getElementById("project1").style.opacity = 1;
   document.getElementById("pop-up").style.zIndex = "0";
+  let project1_index = 0;
+  let project2_index = 0;
+
 }
 
 var projectIndex = 0;
 
 // SHOW EACH PROJET ON THE WEBSITE
 function showProject(n){
-  console.log("HAHAHAHA");
   if (n%2==0){
     document.getElementById("project-title").innerHTML="Zombie Exterminator";
   }
