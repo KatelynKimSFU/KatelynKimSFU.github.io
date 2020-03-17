@@ -4,6 +4,7 @@
 
   <head>
     <title>Katelyn kim</title>
+    <script src="jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Quicksand|Titillium+Web&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,63 +20,70 @@
   <body>
     <div id="top"></div>
     <div class="bg"></div>
-    <div id="logo" data-aos="zoom-in" data-aos-delay="1800"></div>
+    <div id="logo"></div>
     <div class="navigation">
       <ul class="navi">
-        <li data-aos="fade-right" data-aos-delay="1800"><a href="#top">ABOUT ME</a></li>
-        <li data-aos="fade-right" data-aos-delay="2000"><a href="#project-section">PROJECTS</a></li>
-        <li data-aos="fade-right" data-aos-delay="2200"><a href="#contact-section">CONTACT</a> </li>
+        <li><a href="#top">ABOUT ME</a></li>
+        <li><a href="#project-section">PROJECTS</a></li>
+        <li><a href="#contact-section">CONTACT</a> </li>
       </ul>
     </div>
     <div class="content">
       <section class="aboutme">
-        <p id="hi" data-aos="zoom-in" data-aos-duration="500"> Hi, I'm Katelyn! </p>
-        <p id="hi" id="hi2" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">I am a Computing Science Major at Simon Fraser University.</p>
+        <p id="hi" class="text"> Hi, I'm Katelyn! </p>
+        <p id="hi2" class="text" >I am a Computing Science Major at Simon Fraser University.</p>
         <div class="icons">
-          <a href="https://www.linkedin.com/in/jin-young-kim1994/" target="_blank" id="youtube" class="icon">
-            <img src="images/youtube3.png" alt="linkedin" id="youtube" data-aos="flip-left" data-aos-delay="1000">
+          <a href="https://www.youtube.com/channel/UCs_hXU5aS17COvZXjTCNdUw?view_as=subscriber" target="_blank" id="youtube" class="icon">
+            <img src="images/youtube3.png" alt="linkedin" id="youtube">
           </a>
 
           <a href="https://www.linkedin.com/in/jin-young-kim1994/" target="_blank" id="linkedin" class="icon">
-            <img src="images/linkedin2.png" alt="linkedin" id="linkedin" data-aos="flip-left" data-aos-delay="1200">
+            <img src="images/linkedin2.png" alt="linkedin" id="linkedin">
           </a>
           <a href="https://github.com/KatelynKim" target="_blank" id="github" class="icon">
-            <img src="images/github2.png" alt="github" id="github" data-aos="flip-left" data-aos-delay="1400">
+            <img src="images/github2.png" alt="github" id="github">
           </a>
         </div>
       </section>
 
-<!--
-      <section class="hobbies">
-        <p id="hobbies"> I like to... </p>
-        <div class="icons2">
-          <div id="piano" class="hobby" data-aos="flip-left" data-aos-delay="1000"  onclick="toggleVis1()"></div>
-          <div id="paint" class="hobby" data-aos="flip-left"  data-aos-delay="1200" onclick="toggleVis2()"></div>
-          <div id="spanish" class="hobby" data-aos="flip-left" data-aos-delay="1400" onclick="toggleVis3()"></div>
-          <div id="psychology" class="hobby" data-aos="flip-left" data-aos-delay="1600" onclick="toggleVis4()"></div>
-          <div id="game" class="hobby" data-aos="flip-left" data-aos-delay="1800" onclick="toggleVis5()"></div>
+      <section id="project-section">
+
+        <p id="project-header" >MY PROJECTS</p>
+
+        <div class="project-container">
+
+            <p id="project_title" onclick="plusProject(1)">Zombie Exterminator</p>
+
+            <div class = "project fade" id="project1" onclick="showPopUp()"></div>
+            <div class = "project fade"  id="project2"></div>
+
+
+            <a class="next" onclick="plusSlides(1)">
+              <img class="next_img" src="images/next.png">
+            </a>
+
+            <a class="prev" onclick="plusSlides(-1)">
+              <img class= "prev_img" src="images/back.png">
+            </a>
         </div>
 
-        <div id="piano-desc" class="desc">I've been playing piano since 7.<div>
-        <div id="paint-desc" class="desc"><div>
-        <div id="spanish-desc" class="desc"><div>
-        <div id="psychology-desc" class="desc"><div>
-        <div id="game-desc" class="desc"><div>
+        <div id ="pop-up">
+          <img src="images/close.png" id="close" onclick="closePopUp()">
+          <img src="images/project2g.png" class="proj_zombie fade" style="width:70%">
 
-      </section>
-    -->
+          <p id = "project_description"> A puzzle game for Android devices.</p>
 
-      <section id="project-section">
-        <p id="project-header">MY PROJECTS</p>
-        <div id="project1" data-aos="zoom-in"></div>
-        <div id="project2">airbnb</div>
-        <div id="project3">sudoku solver</div>
-      </section>
+          <a class="next_popup">
+            <img class="next_img" src="images/next.png" onclick="plusProject1_index(1)">
+          </a>
 
-      <section id="contact-section">
-        <p id="contact-header">CONTACT ME</p>
-        <p id="location">BC Canada </p>
-        <p id="email">katelynk@sfu.ca</p>
+          <a class="prev_popup">
+            <img class= "prev_img" src="images/back.png" onclick="plusProject1_index(-1)">
+          </a>
+
+
+
+        </div>
 
 
 
@@ -85,14 +93,44 @@
 
 
 
+  <section id="contact-section">
+    <p id="contact-header" class="text">CONTACT ME</p>
+    <p id="location">BC Canada </p>
+    <p id="email">katelynk@sfu.ca</p>
+  </section>
 
-    </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
   <script src="java/main.js"></script>
+
+
+   <script>
+      $(document).ready(function() {
+        $("#hi").hide().fadeIn(1000);
+        $("#hi2").hide().delay(1000).fadeIn(1000);
+        $("#youtube").hide().delay(2000).slideDown(500);
+        $("#linkedin").hide().delay(2000).slideDown(500);
+        $("#github").hide().delay(2000).slideDown(500);
+
+   $(window).scroll( function(){
+   $(".text").each(function(i){
+         var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+         var bottom_of_window = $(window).scrollTop() + $(window).height();
+         if( bottom_of_window > bottom_of_object ){
+                $(this).animate({'opacity':'1'},500);
+         }
+   }
+          )
+          }
+
+
+
+
+      )
+    }
+  );
+    </script>
+
+
+  </body>
+
 
   </html>
